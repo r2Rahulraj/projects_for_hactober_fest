@@ -1,0 +1,38 @@
+A51 MACRO ASSEMBLER  16_BIT_ADD                                                           02/18/2020 11:42:57 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\16_bit_add.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 16_bit_add.asm SET(SMALL) DEBUG PRINT(.\Listings\16_bit_add.lst) OBJECT
+                      (.\Objects\16_bit_add.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;8051 ASSEMBLY CODE TO ADD TWO 16 BIT NUMBERS
+0000                   2     ORG  0000H;
+0000 C3                3     CLR C;
+0001 7420              4     MOV A,#020H;
+0003 24DE              5     ADD A,#0DEH;
+0005 F9                6     MOV R1,A;
+0006 7465              7     MOV A,#65H;
+0008 34AB              8     ADDC A,#0ABH;
+000A F8                9     MOV R0,A;
+000B 8880             10     MOV P0,R0;
+000D 8990             11     MOV P1,R1;
+                      12     END
+A51 MACRO ASSEMBLER  16_BIT_ADD                                                           02/18/2020 11:42:57 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
